@@ -882,14 +882,9 @@
                 });
                 
                 const video = document.createElement('video');
-                video.setAttribute('playsinline', true); // prevents iOS fullscreen
-                video.setAttribute('autoplay', true);
-                video.setAttribute('muted', true);
-                video.style.width = '100%';
-                video.style.height = '100%';
-                video.style.objectFit = 'cover';
-                video.style.borderRadius = '17px';
                 video.srcObject = stream;
+                video.autoplay = true;
+                video.muted = true;
                 
                 cameraInput.innerHTML = '';
                 cameraInput.appendChild(video);
